@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Martian Mono', monospace;
+    padding: 1rem;
+}
+
+.ficto-purple {
+    color: rgb(179, 6, 179);
+}
+
+.indented {
+    margin-left: 25px;
+}
+
+.text-grid-container {
+    display: grid;
+    grid-template-columns: 10% 35%;
+    align-items: baseline;
+}

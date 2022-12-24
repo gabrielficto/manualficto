@@ -18,3 +18,22 @@ body {
     grid-template-columns: 10% 35%;
     align-items: baseline;
 }
+
+.ficto-flag {
+    width: 350px;
+    height: 225px;
+    opacity: 0.2;
+}
+
+.text-half {
+    max-width: 60vw;
+}
+
+.text-half2 {
+    max-width: 55vw;
+}
+
+li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

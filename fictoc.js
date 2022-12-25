@@ -36,8 +36,8 @@ const content = {
                 <p>referências bibliográficas usadas para construir esse site</p>
             </div>
             <div class="text-grid-container">
-                <strong>sos</strong>
-                <p>dicas de sobrevivência</p>
+                <strong>mute</strong>
+                <p>mutar a música</p>
             </div>
             <div class="text-grid-container">
                 <strong>subid</strong>
@@ -80,21 +80,33 @@ const content = {
                         mas sabemos que tudo isso é fictício. NÃO ESTAMOS DOENTES NEM SOMOS RETARDADOS!!!
                     </li>
                     <li>
-                        <u>USE A SUA CRIATIVIDADE</u>:
+                        <u>USE A SUA CRIATIVIDADE</u>: ser ficto significa ter que fazer algumas gambiarras pra conseguir ficar perto de quem amamos, já que eles não existem na vida real. Pra isso, vale de tudo pra
+                        você se sentir mais perto do seu f/o: escrever fanfics, fazer desenhos, assistir repetidamente à série em que o seu f/o aparece até criar playlists com músicas que eles mesmos cantam ou músicas que te façam lembrar deles.
+                        Você que manda! Sabemos que você é bem criativo, então manda ver e nos impressione! Se você tiver uma imaginação fértil (e mesmo que não tenha, dá pra fazer isso), pode fechar os olhos e se imaginar com o seu/sua amado/a.
+                        Também é importante ressaltar que um relacionamento fictício (relacionamentos com pessoas reais também, caso você não se cuide) às vezes pode te fazer mal. Justamente pela natureza dele, já que você não tem nenhum tipo de retorno. Isso pode se tornar frustrante com o tempo
+                        e te deixar triste. Por isso, é importante ter alguém confiável pra conversar sobre o tema.
                     </li>
                     <li>
-                        <u>NÃO SE ISOLE, EM HIPÓTESE ALGUMA!</u>:
+                        <u>NÃO SE ISOLE, EM HIPÓTESE ALGUMA! SE PRECISAR, PROCURE AJUDA!</u>: ser ficto também significa se sentir sozinho, estranho e incompreendido às vezes. Mas, a pior coisa que você pode fazer é se isolar. Todos precisamos de
+                        contato com outras pessoas e se isolar vai te deixar pior ainda. Se você tá com problemas em se aceitar ou qualquer outra coisa, não tenha vergonha de pedir ajuda, ainda mais se você também estiver passando por problemas como depressão e ansiedade.
+                        Você pode pedir apoio a algum amigo de confiança, a um profissional especializado, como um psicólogo, ou em fóruns online. 
                     </li>
                     <li>
-                        <u>SE PRECISAR, PROCURE AJUDA</u>:
+                        <u>FAÇA AMIZADE COM QUEM TE ACEITE E APOIE</u>: é importante você fazer amizade com pessoas que te aceitem do jeito que você é e te apoiem. Se você não puder ser você mesmo ao lado dessa pessoa ou ela ficar te julgando e rindo de você
+                        a todo instante, tentando te colocar pra baixo, se afaste o mais rápido possível dela. Um amigo de verdade vai tentar te entender e não vai te julgar pelo que você é, mesmo que não aceite. As pessoas não são obrigadas a aceitarem nada ou
+                        mudarem de opinião, mas elas têm que te respeitar e você tem o dever de exigir ser respeitado e, se sofrer algum tipo de bullying, denuncie pra alguém! É uma vergonha ter que falar isso em pleno século 21, mas as pessoas ainda não
+                        aprenderam a respeitar os outros, isso é fato. Encontrar outras pessoas ficto pode ser uma tarefa muito difícil, mas não tem desculpa pra não tentar, até porque hoje em dia temos a internet. É só pesquisar um pouco que você vai achar alguém
+                        com quem você vai se identificar.
                     </li>
                     <li>
-                        <u>FAÇA AMIZADE COM QUEM TE ACEITE E APOIE</u>:
-                    </li>
-                    <li>
-                        <u>E SE EU NÃO FOR FICTO, MAS TIVER UM AMIGO OU PARENTE ASSIM?</u>:
+                        <u>E SE EU NÃO FOR FICTO, MAS TIVER UM AMIGO OU PARENTE ASSIM?</u>: bom, nesse caso o que você pode fazer é pesquisar sobre o tema pra entender melhor e apoiar a pessoa. Se você caiu nessa página, 
+                        provavelmente estava fazendo isso, então parabéns! Se você tiver um amigo ficto, você não é obrigado a concordar com o que ele faz ou aceitá-lo, mas você tem a obrigação de respeitá-lo. Se não quiser fazer isso,
+                        termine a amizade, simples! Ah, e NÃO DIGA pra um ficto: "ah, mas ele/ela nem existe!". NÃO SOMOS RETARDADOS, SABEMOS DISSO!!!
                     </li>
                 </ol>
+        </p>
+        <p  class="text-half">
+            Um artigo científico que recomendo ler é <em>Fictosexuality, Fictoromance, and Fictophilia: A Qualitative Study of Love and Desire for Fictional Characters</em>, da Tanja Välisalo. O link você pode encontrar na página de referências bibliográficas.
         </p>
     `
 }
@@ -112,7 +124,11 @@ document.addEventListener("keypress", (e)=>{
             document.getElementById("audio-player").src = "assets/bgm2.mp3";
     }
 
-    if(e.key == "h"){
-     document.querySelector(".console-area").innerHTML = content["ficto --help"];
+    if(e.key == "k"){
+        document.querySelector(".console-area").innerHTML = content["info"];
+    }
+
+    if(e.key == "m"){
+        document.getElementById("audio-player").src = "";
     }
 })

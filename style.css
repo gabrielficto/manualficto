@@ -3,6 +3,7 @@ body {
     color: white;
     font-family: 'Martian Mono', monospace;
     padding: 1rem;
+    font-size: 0.8rem;
 }
 
 .ficto-purple {
@@ -20,8 +21,8 @@ body {
 }
 
 .ficto-flag {
-    width: 350px;
-    height: 225px;
+    width: 415px;
+    height: 275px;
     opacity: 0.2;
 }
 

@@ -108,6 +108,25 @@ const content = {
         <p  class="text-half">
             Um artigo científico que recomendo ler é <em>Fictosexuality, Fictoromance, and Fictophilia: A Qualitative Study of Love and Desire for Fictional Characters</em>, da Tanja Välisalo. O link você pode encontrar na página de referências bibliográficas.
         </p>
+        <p>Pressione <strong>!</strong> ou digite ref abaixo para exibir as referências bibliográficas.</p>
+    `,
+    "ref": `
+        <img class="ficto-flag" src="https://redwars22.github.io/andrewnation/assets/fictoflag.jpg">
+        <h1>REFERÊNCIAS BIBLIOGRÁFICAS</h1>
+        <h2>Lista de materiais usados para criar esse site</h2>
+        <div  class="text-half">
+            <p>
+            COURT, A. <b>What is fictosexuality? All about the real people turned on by fictional characters</b>. Disponível em: &lt;https://nypost.com/article/what-is-fictosexuality-meaning-definition/&gt;. Acesso em 27 de Dezembro de 2022.
+            </p>
+
+            <p>
+            FICTOSEXUALITY: Yes, it’s real, valid and part of our community. Disponível em:  &lt;https://comeoutasyouare.com/2021/06/25/fictosexuality-yes-its-real-valid-and-part-of-our-community/&gt;. Acesso em 01 de Janeiro de 2022.
+            </p>
+
+            <p>
+                KARHULAHTI, V. VÄLISALO, T. <b>Fictosexuality, Fictoromance, and Fictophilia: A Qualitative Study of Love and Desire for Fictional Characters</b>.
+            </p>
+        </div>
     `
 }
 
@@ -130,6 +149,15 @@ document.addEventListener("keypress", (e)=>{
 
     if(e.key == "k"){
         document.querySelector(".console-area").innerHTML = content["info"];
+    }
+
+    if(e.key == "!"){
+        document.querySelector(".console-area").innerHTML = content["ref"];
+    }
+
+
+    if(e.key == "?"){
+        document.querySelector(".console-area").innerHTML = content["ficto --help"];
     }
 
     if(e.key == "m"){

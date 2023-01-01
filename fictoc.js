@@ -164,3 +164,40 @@ document.addEventListener("keypress", (e)=>{
         document.getElementById("audio-player").src = "";
     }
 })
+
+const zoomLevels = {
+    actualZoomLevel: 0,
+    0: "0.8rem",
+    1: "1rem",
+    2: "1.2rem",
+    3: "1.4rem",
+    4: "1.6rem",
+    5: "2rem",
+}
+
+const accessibility = {
+    zoomIn: () => {
+        if(zoomLevels.actualZoomLevel < 5){
+            zoomLevels.actualZoomLevel++;
+            document.querySelector('body').style['font-size'] = zoomLevels[zoomLevels.actualZoomLevel];
+        }
+    },
+    zoomOut: () => {
+        if(zoomLevels.actualZoomLevel > 0){
+            zoomLevels.actualZoomLevel--;
+            document.querySelector('body').style['font-size'] = zoomLevels[zoomLevels.actualZoomLevel];
+        }
+    },
+    toggleMode: (mode) => {
+        switch(mode){
+            case "light":
+                document.querySelector('body').style['background-color'] = "white";
+                document.querySelector('.input').style['color'] = "rgb(179, 6, 179)";
+                break;
+            case "dark":
+                document.querySelector('body').style['background-color'] = "black";
+                document.querySelector('.input').style['color'] = "white !important";
+                break;
+        }
+    }
+}

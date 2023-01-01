@@ -10,13 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="console-area">
+    <div class="buttons-container">
+        <button title="ampliar texto" onclick="accessibility.zoomIn()"><i class="bi bi-zoom-in"></i></button>
+        <button title="diminuir texto" onclick="accessibility.zoomOut()"><i class="bi bi-zoom-out"></i></button>
+        <button title="fundo claro" onclick="accessibility.toggleMode('light')"><i class="bi bi-sun"></i></button>
+        <button title="fundo escuro" onclick="accessibility.toggleMode('dark')"><i class="bi bi-moon-fill"></i></button>
+    </div>
+    <div class="console-area ficto-purple">
         <div class="console-content">
-            <p class="ficto-purple">
+            <p>
                 FictoLinux 22.10 LTS fictosxl tty1
             </p>
             <p>

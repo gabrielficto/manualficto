@@ -1,9 +1,29 @@
 body {
     background-color: black;
-    color: white;
+    /*color: white;*/
     font-family: 'Martian Mono', monospace;
     padding: 1rem;
     font-size: 0.8rem;
+}
+
+button {
+    background-color: rgb(179, 6, 179);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    color: white;
+}
+
+.input {
+    color: rgb(179, 6, 179);
+}
+
+.buttons-container {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
 }
 
 .ficto-purple {
@@ -23,7 +43,7 @@ body {
 .ficto-flag {
     width: 415px;
     height: 275px;
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .text-half {

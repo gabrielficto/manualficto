@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="tui-scroll-white">
 
 <head>
     <meta charset="UTF-8">
@@ -10,64 +10,132 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="dist/tuicss.min.css">
+    <script src="dist/tuicss.min.js"></script>
+    <style>
+        #window-outside {
+            width: 98vw;
+            overflow: auto;
+        }
+
+        #window {
+            max-height: 90vh;
+            overflow: auto;
+        }
+    </style>
 </head>
 
-<body>
+<body class="tui-bg-purple-black ">
+    <nav class="tui-nav">
+        <ul>
+            <li class="tui-dropdown">
+                <span class="red-168-text">A</span>cessibilidade
+                <div class="tui-dropdown-content">
+                    <ul>
+                        <li><a href="#!"><span class="red-168-text">A</span>umentar fonte</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!"><span class="red-168-text">D</span>iminuir fonte</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tui-dropdown">
+                <span class="red-168-text">M</span>úsica
+                <div class="tui-dropdown-content">
+                    <ul>
+                        <li><a href="#!"><span class="red-168-text">H</span>ootsforce</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="tui-dropdown">
+                <span class="red-168-text">S</span>obre
+                <div class="tui-dropdown-content">
+                    <ul>
+                        <li><a href="#!"><span class="red-168-text">G</span>itHub dos Autores</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!"><span class="red-168-text">S</span>obre o site</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
     <div class="buttons-container">
         <button title="ampliar texto" onclick="accessibility.zoomIn()"><i class="bi bi-zoom-in"></i></button>
         <button title="diminuir texto" onclick="accessibility.zoomOut()"><i class="bi bi-zoom-out"></i></button>
         <button title="fundo claro" onclick="accessibility.toggleMode('light')"><i class="bi bi-sun"></i></button>
         <button title="fundo escuro" onclick="accessibility.toggleMode('dark')"><i class="bi bi-moon-fill"></i></button>
     </div>
-    <div class="console-area ficto-purple">
-        <div class="console-content">
-            <p>
-                FictoLinux 22.10 LTS fictosxl tty1
-            </p>
-            <p>
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                ,,,,,,,,,,,,,,,,,,,,%@@,,,,,@@*,,,,,,,,,,,,,,,,,,,<br>
-                ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,<br>
-                (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                ((((((((((((((((&@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,.@,,,,,,,,,,,,,,,,,<br>
-                ,,,,,,,,,,,,,,,,,,,,,@@,,,,,@@,,,,,,,,,,,,,,,,,,,,<br>
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            </p>
-            <p class="ficto-purple">
-                MANUAL DE SOBREVIVÊNCIA PARA FICTOS EM PT-BR
-            </p>
-            <p>
-                <strong>COPYRIGHT</strong><br>
-                (c) 2022 @gabrielficto e @andrewnation. Feito usando HTML,<br> JS e CSS puros!
-                Tudo feito na raça, truta!
-            </p>
-            <p>Digite <strong>ficto --help</strong> ou pressione <strong>?</strong> abaixo para saber os comandos desse site!</p>
-            <p>Pressione <strong>k</strong> ou digite <strong>info</strong> pra ir pra página de informações.</p>
-            <p>
-                E boa sorte, mano, porque aqui não tem interface gráfica!<br>
-                Aqui é só console raiz! Se você sobreviveu a todo o bullying e<br>
-                estigma relacionado a ser ficto e ainda tá vivo, então você<br> consegue encarar o console de boas!
-                Qualquer coisa, estamos aqui<br> pra te ajudar. É nóis! 👊 Só digitar aqui embaixo e pressionar enter!
-            </p>
-            <p>
-                🎵 Música de fundo: <strong>Hootsforce by GloryHammer</strong>. Pressione <strong>m</strong> para mutar!
-            </p>
-        </div>
-    </div>
-    <div class="input">-$:
-        <span contenteditable id="ficto-command">_</span>
+    <div id="window-outside" class="tui-window tui-bg-purple-black">
+        <fieldset id="window" class="tui-fieldset tui-bg-purple-black">
+            <legend>Manual de Sobrevivência para Fictos</legend>
+            <div class="console-area ficto-purple">
+                <div class="console-content">
+                    <p>
+                        FictoLinux 22.10 LTS fictosxl tty1
+                    </p>
+                    <p>
+                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+                        ,,,,,,,,,,,,,,,,,,,,%@@,,,,,@@*,,,,,,,,,,,,,,,,,,,<br>
+                        ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,<br>
+                        (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
+                        ((((((((((((((((&@,,,,,,,,,,,,,,,@((((((((((((((((<br>
+                        (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
+                        ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,.@,,,,,,,,,,,,,,,,,<br>
+                        ,,,,,,,,,,,,,,,,,,,,,@@,,,,,@@,,,,,,,,,,,,,,,,,,,,<br>
+                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                    </p>
+                    <p class="ficto-purple">
+                        MANUAL DE SOBREVIVÊNCIA PARA FICTOS EM PT-BR
+                    </p>
+                    <p>
+                        <strong>COPYRIGHT</strong><br>
+                        (c) 2022 @gabrielficto e @andrewnation. Feito usando HTML,<br> JS e CSS puros!
+                        Tudo feito na raça, truta!
+                    </p>
+                    <p>Digite <strong>ficto --help</strong> ou pressione <strong>?</strong> abaixo para saber os
+                        comandos desse site!</p>
+                    <p>Pressione <strong>k</strong> ou digite <strong>info</strong> pra ir pra página de informações.
+                    </p>
+                    <p>
+                        E boa sorte, mano, porque aqui não tem interface gráfica!<br>
+                        Aqui é só console raiz! Se você sobreviveu a todo o bullying e<br>
+                        estigma relacionado a ser ficto e ainda tá vivo, então você<br> consegue encarar o console de
+                        boas!
+                        Qualquer coisa, estamos aqui<br> pra te ajudar. É nóis! 👊 Só digitar aqui embaixo e pressionar
+                        enter!
+                    </p>
+                    <p>
+                        🎵 Música de fundo: <strong>Hootsforce by GloryHammer</strong>. Pressione <strong>m</strong>
+                        para mutar!
+                    </p>
+                </div>
+            </div>
+            <div class="input">-$:
+                <span contenteditable id="ficto-command">_</span>
+            </div>
+        </fieldset>
     </div>
 
-    <audio id="audio-player" src="assets/bgm.mp3" hidden autoplay loop ></audio>
+    <audio id="audio-player" src="assets/bgm.mp3" hidden autoplay loop></audio>
 
     <script src="fictoc.js"></script>
+    <div class="tui-statusbar">
+        <ul>
+            <li><a href="#!"><span class="red-168-text">?</span> Ajuda</a></li>
+            <span class="tui-statusbar-divider"></span>
+            <li><a href="#!"><span class="red-168-text">!</span> Referências Bibliográficas</a></li>
+            <span class="tui-statusbar-divider"></span>
+            <li><a href="#!"><span class="red-168-text">m</span> Mutar Música</a></li>
+            <span class="tui-statusbar-divider"></span>
+            <li><a href="#!"><span class="red-168-text">k</span> Sobre a Fictossexualidade</a></li>
+        </ul>
+    </div>
 </body>
 
 </html>

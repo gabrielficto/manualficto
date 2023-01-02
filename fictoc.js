@@ -191,12 +191,20 @@ const accessibility = {
     toggleMode: (mode) => {
         switch(mode){
             case "light":
-                document.querySelector('body').style['background-color'] = "white";
+                //document.querySelector('body').style['background-color'] = "white";
+                document.querySelector('body').className = "tui-bg-purple-black";
+                document.querySelector('#window').className = "tui-fieldset tui-bg-purple-black";
+                document.querySelector('#window-outside').className = "tui-bg-purple-black";
                 document.querySelector('.input').style['color'] = "rgb(179, 6, 179)";
+                document.querySelector('legend').style['color'] = "rgb(179, 6, 179) !important";
                 break;
             case "dark":
-                document.querySelector('body').style['background-color'] = "black";
+                //document.querySelector('body').style['background-color'] = "black";
+                document.querySelector('body').className = "tui-bg-purple-white";
+                document.querySelector('#window').className = "tui-fieldset tui-bg-purple-white";
+                document.querySelector('#window-outside').className = "tui-bg-purple-white";
                 document.querySelector('.input').style['color'] = "white !important";
+                document.querySelector('legend').style['color'] = "white !important";
                 break;
         }
     }

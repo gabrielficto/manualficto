@@ -1,7 +1,7 @@
 body {
     background-color: black;
     /*color: white;*/
-    font-family: 'Martian Mono', monospace;
+    /*font-family: 'Martian Mono', monospace;*/
     padding: 1rem;
     font-size: 0.8rem;
 }
@@ -41,8 +41,8 @@ button {
 }
 
 .ficto-flag {
-    width: 415px;
-    height: 275px;
+    width: 315px;
+    height: 175px;
     opacity: 0.5;
 }
 

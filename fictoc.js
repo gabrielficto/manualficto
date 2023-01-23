@@ -127,13 +127,47 @@ const content = {
                 KARHULAHTI, V. VÄLISALO, T. <b>Fictosexuality, Fictoromance, and Fictophilia: A Qualitative Study of Love and Desire for Fictional Characters</b>.
             </p>
         </div>
+    `,
+    "about": `
+        <img class="ficto-flag" src="https://redwars22.github.io/andrewnation/assets/fictoflag.jpg">
+        <h1>SOBRE O SITE</h1>
+        <p>
+            O manual ficto é um site criado pelo Gabriel e pelo AndrewNation pra divulgar informações
+            sobre a fictossexualidade para falantes de Língua Portuguesa, já que boa parte das informações
+            estão disponíveis apenas em inglês.
+        </p>
+        <h2>VISITE OS REPOS DOS AUTORES:</h2>
+        <div>
+            <a class="tui-button red-168 white-text" href="https://github.com/gabrielficto">@gabrielficto</a>
+            <a class="tui-button red-168 white-text" href="https://github.com/Redwars22">@andrewnation</a>
+        </div>
+        <p>
+            Lembrando que esse site é de código aberto! Você pode editar e corrigir alguma informação e depois
+            fazer o pull request!
+        </p>
     `
 }
 
 if(document.URL.includes("?q=fictosexuality&&lang=pt-br"))
 document.querySelector(".console-area").innerHTML = content["info"];
 
+function switchPage(arg){
+    switch(arg){
+        case "about":
+            document.querySelector(".console-area").innerHTML = content["about"];
+    }
+}
 
+function handleMusic(id){
+    switch(id){
+        case "1":
+            document.getElementById("audio-player").src = "assets/bgm1.mp3";
+            break;
+        case "2":
+            document.getElementById("audio-player").src = "assets/bgm2.mp3";
+            break;
+    }
+}
 document.addEventListener("keypress", (e)=>{
     if(e.key == "Enter"){
         e.preventDefault();

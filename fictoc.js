@@ -159,28 +159,11 @@ function switchPage(arg){
 }
 
 function handleMusic(id){
-    switch(id){
-        case "1":
-            document.getElementById("audio-player").src = "assets/bgm1.mp3";
-            break;
-        case "2":
-            document.getElementById("audio-player").src = "assets/bgm2.mp3";
-            break;
-    }
+    if(id <= 6 && id >= 1)
+        document.getElementById("audio-player").src = `assets/bgm${id}.mp3`;
 }
+
 document.addEventListener("keypress", (e)=>{
-    if(e.key == "Enter"){
-        e.preventDefault();
-
-        const command = document.getElementById("ficto-command").innerText.trim();
-
-        if(content[command])
-            document.querySelector(".console-area").innerHTML = content[command];
-
-        if(command == "nextsng")
-            document.getElementById("audio-player").src = "assets/bgm2.mp3";
-    }
-
     if(e.key == "k"){
         document.querySelector(".console-area").innerHTML = content["info"];
     }

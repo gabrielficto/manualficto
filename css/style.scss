@@ -1,0 +1,156 @@
+body {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  width: calc(100vw - 30px);
+  max-width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
+  max-height: calc(100vh - 30px);
+  margin: 0px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header {
+  background-color: rgb(35, 2, 65);
+  max-width: fit-content;
+  height: 93vh;
+  max-height: 93vh;
+  align-self: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 2px solid pink;
+  padding: 15px;
+  border-right: none;
+}
+
+main {
+  height: calc(93vh);
+  width: 85vw;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid pink;
+  background-color: rgb(15, 1, 27);
+  border-left: none;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: auto;
+}
+
+.ficto-flag {
+  border-radius: 15px;
+  transform: rotate(2deg);
+  transition: transform 500ms;
+}
+
+.ficto-flag:hover {
+  transform: rotate(-4deg);
+  filter: brightness(125%) saturate(125%);
+  transition: transform 500ms;
+  border: 10px solid purple;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: purple;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: -5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #737d91;
+}
+
+.title {
+  font-size: 32px;
+  color: #737d91;
+}
+
+.content-block {
+  border-radius: 15px;
+  background-color: #20202e;
+  border: 2px solid #38384e;
+  color: #414b64;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(174, 0, 255);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5400b3;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.gray-text {
+  color: #737d91;
+}
+
+.subtitle {
+  color: rgb(222, 19, 230);
+  font-size: 22px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  margin-left: -30px;
+}
+
+.flag {
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.flag-container {
+  position: relative;
+}
+
+.alpha-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(240, 35, 240);
+}

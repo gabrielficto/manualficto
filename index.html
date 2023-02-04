@@ -1,140 +1,384 @@
 <!DOCTYPE html>
-<html lang="en" class="tui-scroll-white">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sou fictossexual... e agora? Dicas de como sobreviver e explicação do conceito em português do Brasil!">
-    <meta name="keywords" content="fictosexual, fictosexuality, fictoromantic, fictossexual, fictossexualidade, ficto, fictorromântico">
-    <title>Manual de Sobrevivência para Fictos em Português do Brasil 🖤️💜️🤍️⚪️🇧🇷️🌈️!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="dist/tuicss.min.css">
-    <script src="dist/tuicss.min.js"></script>
-    <style>
-        #window-outside {
-            width: 98vw;
-            overflow: auto;
-            margin-top: 20px;
-        }
-
-        #window {
-            max-height: 90vh;
-            overflow: auto;
-        }
-
-        .ficto-flag {
-            width: 455px;
-            height: 265px;
-            opacity: 0.5;
-        }
-    </style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Sou fictossexual... e agora? Dicas de como sobreviver e explicação do conceito em português do Brasil!" />
+	<meta name="keywords"
+		content="fictosexual, fictosexuality, fictoromantic, fictossexual, fictossexualidade, ficto, fictorromântico" />
+	<title>
+		Manual de Sobrevivência para Fictos em Português do Brasil
+		🖤️💜️🤍️⚪️🇧🇷️🌈️!
+	</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="tui-bg-purple-black ">
-    <nav class="tui-nav">
-        <ul>
-            <li class="tui-dropdown">
-                <span class="red-168-text">A</span>cessibilidade
-                <div class="tui-dropdown-content">
-                    <ul>
-                        <li><a href="#!" onclick="accessibility.zoomIn()"><span class="red-168-text">A</span>umentar
-                                fonte</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#!" onclick="accessibility.zoomOut()"><span class="red-168-text">D</span>iminuir
-                                fonte</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#!" onclick="accessibility.toggleMode('light')"><span
-                                    class="red-168-text">M</span>odo claro</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="tui-dropdown">
-                <span class="red-168-text">M</span>úsica
-                <div class="tui-dropdown-content">
-                    <ul>
-                        <li><a onclick="handleMusic('1')"><span class="red-168-text" >H</span>ootsforce - Gloryhammer</a></li>
-                        <li><a onclick="handleMusic('2')"><span class="red-168-text">A</span>ngusMcFife - Gloryhammer</a></li>
-                        <li><a onclick="handleMusic('3')"><span class="red-168-text">F</span>orest of Fear - Aakash Gandhi</a></li>
-                        <li><a onclick="handleMusic('4')"><span class="red-168-text">P</span>retty Little Psycho - Harley Quinn</a></li>
-                        <li><a onclick="handleMusic('5')"><span class="red-168-text">H</span>ostiles Inbound - Miguel Johnson</a></li>
-                        <li><a onclick="handleMusic('6')"><span class="red-168-text">K</span>ill the Lights - Set it Off</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="tui-dropdown">
-                <span class="red-168-text">S</span>obre
-                <div class="tui-dropdown-content">
-                    <ul>
-                        <li><a onclick="switchPage('about')"><span class="red-168-text">G</span>itHub dos Autores</a></li>
-                    </ul>
-                    <ul>
-                        <li><a onclick="switchPage('about')"><span class="red-168-text">S</span>obre o site</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div id="window-outside" class="tui-window tui-bg-purple-black">
-        <fieldset id="window" class="tui-fieldset tui-bg-purple-black">
-            <legend>Manual de Sobrevivência para Fictos</legend>
-            <div class="console-area ficto-purple">
-                <div class="console-content">
-                    <p>
-                        FictoLinux 22.10 LTS fictosxl tty1
-                    </p>
-                    <p>
-                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                        ,,,,,,,,,,,,,,,,,,,,%@@,,,,,@@*,,,,,,,,,,,,,,,,,,,<br>
-                        ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,<br>
-                        (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                        ((((((((((((((((&@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                        (((((((((((((((((@,,,,,,,,,,,,,,,@((((((((((((((((<br>
-                        ,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,.@,,,,,,,,,,,,,,,,,<br>
-                        ,,,,,,,,,,,,,,,,,,,,,@@,,,,,@@,,,,,,,,,,,,,,,,,,,,<br>
-                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
-                        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                    </p>
-                    <p class="ficto-purple">
-                        MANUAL DE SOBREVIVÊNCIA PARA FICTOS EM PT-BR
-                    </p>
-                    <p>
-                        <strong>COPYRIGHT</strong><br>
-                        (c) 2022 @gabrielficto e @andrewnation. Feito usando HTML,<br> JS, CSS e TuiCSS (pra fazer esse design estilo MS-DOS bem topzera) 
-                    </p>
-                    <p>Pressione <strong>k</strong> pra ir pra página de informações.
-                    </p>
-                    <p>
-                        🎵 Música de fundo: <strong>Hootsforce by GloryHammer</strong>. Pressione <strong>m</strong>
-                        para mutar!
-                    </p>
-                </div>
-            </div>
-        </fieldset>
-    </div>
+<body>
+	<header>
+		<div class="header-container">
+			<figure class="flag-container">
+				<img class="ficto-flag"
+					src="https://raw.githubusercontent.com/Redwars22/andrewnation/main/assets/fictosexual_flag.png"
+					width="150" alt="" />
+				<h1 class="alpha-notice">BETA!</h1>
+			</figure>
+			<nav>
+				<ul>
+					<a href="#about-fictosexuality">Conceito</a>
+					<a href="#ficto-flag">Bandeira</a>
+					<a href="#survival-tips">Dicas de Sobrevivência</a>
+					<a href="#microlabels">Sub-identidades</a>
+					<a href="#bibliography">Referências</a>
+					<a href="#about-us">Sobre</a>
+				</ul>
+				
+				<ul>
+					<h3 class="gray-text">Sub-identidades</h3>
+					<span class="gray-text">* Baseadas em gênero do personagem</span>
+					<a href="#bificto">BIFICTO</a>
+					<a href="#demificto">DEMIFICTO</a>
+					<a href="#gficto">GAY-FICTO</a>
+					<a href="#fictohet">FICTOHETERO</a>
+					<a href="#lesbificto">LESBIFICTO</a>
+				</ul>
+				<ul>
+					<a href="https://github.com/gabrielficto">@gabrielficto</a>
+					<a href="https://github.com/Redwars22">@andrewnation</a>
+				</ul>
+				<!--<span class="gray-text">* Baseadas em gênero do personagem</span>
+				<ul>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+				</ul>-->
 
-    <audio id="audio-player" src="assets/bgm.mp3" hidden autoplay loop></audio>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section>
+			<span class="title" id="about-fictosexuality">Conceito</span>
+			<div class="content-block">
+				<p>
+					Fictossexual é um termo relativamente novo, que se refere à atração
+					por pessoas fictícias (personagens de livros, desenhos animados,
+					jogos, filmes, séries, personagens inventados por si mesmo, etc.).
+				</p>
+			</div>
+		</section>
 
-    <script src="fictoc.js"></script>
-    <div class="tui-statusbar">
-        <ul>
-            <li><a href="#!"><span class="red-168-text">?</span> Ajuda</a></li>
-            <span class="tui-statusbar-divider"></span>
-            <li><a href="#!"><span class="red-168-text">!</span> Referências Bibliográficas</a></li>
-            <span class="tui-statusbar-divider"></span>
-            <li><a href="#!"><span class="red-168-text">m</span> Mutar Música</a></li>
-            <span class="tui-statusbar-divider"></span>
-            <li><a href="#!"><span class="red-168-text">k</span> Sobre a Fictossexualidade</a></li>
-        </ul>
-    </div>
+		<section>
+			<span class="title" id="ficto-flag">Bandeira</span>
+			<img src="https://raw.githubusercontent.com/Redwars22/andrewnation/main/assets/fictosexual_flag.png"
+				width="500px" class="flag" alt="" />
+			<div class="content-block">
+				<p>
+					A bandeira oficial consiste de duas faixas pretas na parte superior
+					e inferior e duas faixas cinzas na região mais do meio,
+					representando a falta de atração fora do plano fictício. Já a faixa
+					roxa no meio e o círculo representam a atração sexual e um portal
+					para um mundo fictício. A cor rosa dentro do círculo representa a
+					atração por personagens fictícios.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<span class="title" id="survival-tips">Dicas de Sobrevivência</span>
+			<p class="gray-text">
+				Se você leu até aqui ou já deu uma boa pesquisada sobre o tema e
+				chegou a conclusão de que você é fictossexual, não se desespere! A
+				sociedade pode ser cruel e as pessoas meio infantis e malvadas,
+				especialmente no Ensino Médio. Nós sabemos, já passamos por isso, mas
+				saiba que você é forte e vai aprender a lidar com as críticas das
+				pessoas. O Gabriel e eu separamos algumas dicas pra te ajudar nesse
+				processo:
+			</p>
+			<section>
+				<span class="subtitle">
+					NÃO TENHA PRESSA E RESPEITE O SEU TEMPO E OS SEUS LIMITES
+				</span>
+				<p class="gray-text">
+					Você não é obrigado a contar pra todo mundo logo de cara. Procure se
+					aceitar primeiro e se sentir bem com a sua identidade e, quando se
+					sentir confortável, fale sobre isso com alguém de confiança. Se vocẽ
+					não quiser falar pra ninguém, também tá tudo bem, você não deve
+					satisfação a ninguém sobre a sua vida privada.
+				</p>
+			</section>
+
+			<section>
+				<span class="subtitle">SER FICTOSSEXUAL NÃO É DOENÇA</span>
+				<p class="gray-text">
+					Entenda que, ao contrário do que as pessoas possam te falar, ser
+					fictossexual não significa que você é louco, esquizofrênico ou
+					alguém que precisa de tratamento psiquiátrico. A fictossexualidade é
+					uma sexualidade válida como todas as outras. Os fictos sabem
+					distinguir muito bem ficção da realidade, não estamos delirando. O
+					que acontece é que quem amamos está num plano fictício, inalcançável
+					e infelizmente nunca poderemos abraçar, beijar, tocar e fazer outras
+					coisas com os nossos f/os (é como os fictos se referem aos seus
+					parceiros fictícios), mas continuamos amando eles, da mesma forma
+					que alguém amaria uma pessoa real, mas sabemos que tudo isso é
+					fictício. NÃO ESTAMOS DOENTES NEM SOMOS RETARDADOS!!!
+				</p>
+			</section>
+
+			<section>
+				<span class="subtitle">USE A SUA CRIATIVIDADE</span>
+				<p class="gray-text">
+					Ser ficto significa ter que fazer algumas gambiarras pra conseguir
+					ficar perto de quem amamos, já que eles não existem na vida real.
+					Pra isso, vale de tudo pra você se sentir mais perto do seu f/o:
+					escrever fanfics, fazer desenhos, assistir repetidamente à série em
+					que o seu f/o aparece até criar playlists com músicas que eles
+					mesmos cantam ou músicas que te façam lembrar deles. Você que manda!
+					Sabemos que você é bem criativo, então manda ver e nos impressione!
+					Se você tiver uma imaginação fértil (e mesmo que não tenha, dá pra
+					fazer isso), pode fechar os olhos e se imaginar com o seu/sua
+					amado/a. Também é importante ressaltar que um relacionamento
+					fictício (relacionamentos com pessoas reais também, caso você não se
+					cuide) às vezes pode te fazer mal, justamente pela natureza dele, já
+					que você não tem nenhum tipo de retorno. Isso pode se tornar
+					frustrante com o tempo e te deixar triste. Não se desespere! Dê um
+					tempo no relacionamento se for preciso, mas certifique-se de que
+					você está bem consigo mesmo primeiro! Por isso, é importante ter
+					alguém confiável pra conversar sobre o tema.
+				</p>
+			</section>
+
+			<section>
+				<span class="subtitle">NÃO SE ISOLE, EM HIPÓTESE ALGUMA! SE PRECISAR, PROCURE AJUDA!</span>
+				<p class="gray-text">
+					Ser ficto também significa se sentir sozinho, estranho e
+					incompreendido às vezes. Mas, a pior coisa que você pode fazer é se
+					isolar. Todos precisamos de contato com outras pessoas e se isolar
+					vai te deixar pior ainda. Se você tá com problemas em se aceitar ou
+					qualquer outra coisa, não tenha vergonha de pedir ajuda, ainda mais
+					se você também estiver passando por problemas como depressão e
+					ansiedade. Você pode pedir apoio a algum amigo de confiança, a um
+					profissional especializado, como um psicólogo, ou em fóruns online.
+				</p>
+			</section>
+
+			<section>
+				<span class="subtitle">FAÇA AMIZADE COM QUEM TE ACEITE E APOIE</span>
+				<p class="gray-text">
+					É importante você fazer amizade com pessoas que te aceitem do jeito
+					que você é e te apoiem. Se você não puder ser você mesmo ao lado
+					dessa pessoa ou ela ficar te julgando e rindo de você a todo
+					instante, tentando te colocar pra baixo, se afaste o mais rápido
+					possível dela. Um amigo de verdade vai tentar te entender e não vai
+					te julgar pelo que você é, mesmo que não aceite. As pessoas não são
+					obrigadas a aceitarem nada ou mudarem de opinião, mas elas têm que
+					te respeitar e você tem o dever de exigir ser respeitado e, se
+					sofrer algum tipo de bullying, denuncie pra alguém! É uma vergonha
+					ter que falar isso em pleno século 21, mas as pessoas ainda não
+					aprenderam a respeitar os outros, isso é fato. Encontrar outras
+					pessoas ficto pode ser uma tarefa muito difícil, mas não tem
+					desculpa pra não tentar, até porque hoje em dia temos a internet. É
+					só pesquisar um pouco que você vai achar alguém com quem você vai se
+					identificar.
+				</p>
+			</section>
+
+			<section>
+				<span class="subtitle">
+					E SE EU NÃO FOR FICTO, MAS TIVER UM AMIGO OU PARENTE ASSIM?
+				</span>
+				<p class="gray-text">
+					Bom, nesse caso o que você pode fazer é pesquisar sobre o tema pra
+					entender melhor e apoiar a pessoa. Se você caiu nessa página,
+					provavelmente estava fazendo isso, então parabéns! Se você tiver um
+					amigo ficto, você não é obrigado a concordar com o que ele faz ou
+					aceitá-lo, mas você tem a obrigação de respeitá-lo. Se não quiser
+					fazer isso, termine a amizade, simples! Ah, e NÃO DIGA pra um ficto:
+					"ah, mas ele/ela nem existe!". NÃO SOMOS RETARDADOS, SABEMOS
+					DISSO!!!
+				</p>
+			</section>
+		</section>
+
+		<section>
+			<span class="title" id="microlabels">Sub-identidades</span>
+			<p class="gray-text">
+				As sub-identidades ficto são termos usados para expressar a atração
+				e/ou preferência por personagens de um determinado gênero (do mesmo
+				gênero que você, dos dois gêneros, etc.), uma determinada categoria
+				(herói, vilão, etc.) ou tipo de mídia (personagens de livros, de
+				videogames, etc.). O termo fictossexual por si só já é bem abrangente,
+				mas se você quiser especificar pode usar qualquer uma das
+				sub-identidades.
+			</p>
+		</section>
+		<section>
+			<span class="subtitle" id="bificto">Bifictossexual</span>
+			<div class="content-block">
+				<strong>Bifictossexual</strong> (também conhecido alternativamente
+				como <strong>fictobissexual</strong>) é uma sub-identidade que se
+				referem a fictos que sentem atração sexual por personagens fictícios
+				de dois ou mais gêneros. (WORK IN PROGRESS!)
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">
+				Booklossexual
+			</span>
+			<div class="content-block">
+				Indivíduo fictossexual que sente atração por personagens de livros.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle"  id="demificto">Demifictossexual</span>
+			<div class="content-block">
+				<p>
+					<strong>Demifictossexual</strong> é uma sub-identidade que se refere
+					a fictos que necessitam sentir algum vínculo afetivo ou romântico
+					com algum personagem para só então desenvolver a atração sexual por
+					ele.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle"  id="fictohet">Fictoheterossexual</span>
+			<div class="content-block">
+				É uma sub-identidade ficto que se refere à atração por personagens de
+				um gênero diferente do seu: garotos atraídos por personagens femininas
+				e garotas atraídas por personagens masculinos.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Gamossexual</span>
+			<div class="content-block">
+				Fictos atraídos por personagens de videogames.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle"  id="gficto">Gayfictossexual</span>
+			<div class="content-block">
+				<p>
+					É uma sub-identidade que se refere a garotos ficto que se atraem por
+					personagens masculinos. Também é conhecido como
+					<strong>homofictossexual</strong>.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Herofictossexual</span>
+			<div class="content-block">
+				Refere-se a fictos que se atraem por personagens heróis. (WIP!)
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle"  id="lesbificto">Lesbifictossexual</span>
+			<div class="content-block">
+				Refere-se a garotas ficto que sentem atração por personagens do sexo
+				feminino. Também pode ser chamado de
+				<strong>homofictossexual</strong>.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Multifictino</span>
+			<div class="content-block">
+				Representa uma mistura de atrações exclusivas por determinadas categorias de personagens. Exemplo:
+				atração por personagens heróis e vampiros.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Neutrumsexual</span>
+			<div class="content-block">
+				Representa atração por personagens independentemente de ser vilão ou herói.
+			</div>
+		</section>
+
+
+
+		<section>
+			<span class="subtitle">Spectrossexual</span>
+			<div class="content-block">
+				Representa a atração por personagens fantasmas.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Teratossexual</span>
+			<div class="content-block">
+				É uma sub-identidade que se refere à atração por personagens monstros.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Tobussexual</span>
+			<div class="content-block">
+				É uma sub-identidade referente àqueles que sentem atração por personagens vampiros.
+			</div>
+		</section>
+
+		<section>
+			<span class="subtitle">Vilanofictossexual</span>
+			<div class="content-block">
+				Sub-identidade ficto que expressa a atração sexual por personagens
+				vilões. Também é conhecido como <strong></strong>.
+			</div>
+		</section>
+
+		<section>
+			<span class="title" id="bibliography">Referências</span>
+			<div class="content-block">
+				<p>
+					COURT, A.
+					<b>What is fictosexuality? All about the real people turned on by
+						fictional characters</b>. Disponível em:
+					&lt;https://nypost.com/article/what-is-fictosexuality-meaning-definition/&gt;.
+					Acesso em 27 de Dezembro de 2022.
+				</p>
+				<p>
+					FICTOSEXUALITY: Yes, it’s real, valid and part of our community.
+					Disponível em:
+					&lt;https://comeoutasyouare.com/2021/06/25/fictosexuality-yes-its-real-valid-and-part-of-our-community/&gt;.
+					Acesso em 01 de Janeiro de 2022.
+				</p>
+				<p>
+					KARHULAHTI, V. VÄLISALO, T.
+					<b>Fictosexuality, Fictoromance, and Fictophilia: A Qualitative
+						Study of Love and Desire for Fictional Characters</b>.
+				</p>
+			</div>
+		</section>
+
+		<section>
+			<span class="title" id="about-us">Sobre nós</span>
+			<p class="content-block">
+				O "manual ficto" é um site criado pelo Gabriel e pelo AndrewNation pra
+				divulgar informações sobre a fictossexualidade para falantes de Língua
+				Portuguesa, já que boa parte das informações estão disponíveis apenas
+				em inglês.
+			</p>
+			<p class="subtitle">VISITE OS REPOS DOS AUTORES:</p>
+			<div style="display: flex; gap: 10px">
+				<a href="https://github.com/gabrielficto">@gabrielficto</a>
+				<a href="https://github.com/Redwars22">@andrewnation</a>
+			</div>
+		</section>
+	</main>
 </body>
 
 </html>

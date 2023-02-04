@@ -15,9 +15,10 @@ body {
 
 header {
   background-color: rgb(35, 2, 65);
-  max-width: fit-content;
+  max-width: 13vw;
   height: 93vh;
   max-height: 93vh;
+  overflow:auto;
   align-self: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;

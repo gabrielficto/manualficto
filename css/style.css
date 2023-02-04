@@ -155,4 +155,13 @@ section {
   color: rgb(240, 35, 240);
 }
 
+.widget-block, .content-block {
+  width: 100%;
+  max-width: 100%;
+}
+
+.widget-block {
+  margin-left: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

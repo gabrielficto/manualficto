@@ -205,7 +205,7 @@ section {
   }
 
   header {
-    visibility: collapse;
+    display: none;
   }
 
   main {

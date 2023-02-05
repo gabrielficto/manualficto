@@ -211,6 +211,8 @@ section {
   main {
     width: calc(95vw - 70px);
     max-width: calc(95vw - 70px);
+    height: calc(95vh - 30px);
+    max-height: calc(95vh - 30px);
     border-radius: 10px;
     border: 2px solid pink;
     background-color: rgb(15, 1, 27);

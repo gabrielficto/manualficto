@@ -41,17 +41,21 @@ main {
   overflow: auto;
 }
 
-.ficto-flag {
+.mobile-flag {
+  margin: 2rem;
+}
+
+.ficto-flag, .mobile-flag {
   border-radius: 15px;
   transform: rotate(2deg);
   transition: transform 500ms;
 }
 
-.ficto-flag:hover {
+.ficto-flag:hover, .mobile-flag:hover {
   transform: rotate(-4deg);
   filter: brightness(125%) saturate(125%);
   transition: transform 500ms;
-  border: 10px solid purple;
+  border: 5px solid purple;
 }
 
 a {
@@ -141,6 +145,7 @@ section {
 .flag {
   margin: 10px;
   border-radius: 20px;
+  width: 60%;
 }
 
 .flag-container {
@@ -155,13 +160,68 @@ section {
   color: rgb(240, 35, 240);
 }
 
-.widget-block, .content-block {
+.content-block {
   width: 100%;
   max-width: 100%;
 }
 
 .widget-block {
   margin-left: 10px;
+  background-color: #20202e;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-top: 3px;
 }
 
+.radio {
+  background-color: #000;
+}
+
+.ficto-button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+}
+
+.radio-buttons {
+  margin-top: -4rem;
+  margin-left: 10px;
+}
+
+
+.special-btn {
+  background-color: #5400b3;
+  margin-top: 1rem;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px){
+  body {
+    flex-direction: column;
+  }
+
+  header {
+    visibility: collapse;
+  }
+
+  main {
+    width: calc(95vw - 70px);
+    max-width: calc(95vw - 70px);
+    border-radius: 10px;
+    border: 2px solid pink;
+    background-color: rgb(15, 1, 27);
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    overflow: auto;
+  }
+
+  .mobile-flag {
+    margin: 1rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
